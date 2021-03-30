@@ -31,14 +31,18 @@ class SignInView: UIView {
     }
     
     private func setupView() {
-        stackView.translatesAutoresizingMaskIntoConstraints = false
         stackView.axis = .vertical
         stackView.spacing = 6
         addSubview(stackView)
-        NSLayoutConstraint.activate([stackView.topAnchor.constraint(equalTo: topAnchor, constant: 8),
-                                     stackView.leftAnchor.constraint(equalTo: leftAnchor, constant: 8),
-                                     stackView.rightAnchor.constraint(equalTo: rightAnchor, constant: -8),
-                                     stackView.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -8)])
+
+        stackView.addConstraints(topAnchor,
+                                 left: leftAnchor,
+                                 bottom: bottomAnchor,
+                                 right: rightAnchor,
+                                 topConstant: 8,
+                                 leftConstant: 8,
+                                 bottomConstant: 8,
+                                 rightConstant: 8)
         
         userLabel.text = viewModel.viewState.userLabelText
         userLabel.font = .boldSystemFont(ofSize: 14)
@@ -52,6 +56,7 @@ class SignInView: UIView {
         userTextField.placeholder = viewModel.viewState.userPlaceHolderText
         userTextField.autocorrectionType = .no
         userTextField.tag = 1
+        userTextField.autocapitalizationType = .none
         userTextField.delegate = self
         
         passwordTextField.placeholder = viewModel.viewState.passwordPlaceHolderText
