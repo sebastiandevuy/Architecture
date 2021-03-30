@@ -28,13 +28,16 @@ class DemoViewController: UIViewController {
     
     private func setupView() {
         view.backgroundColor = .white
-        signInView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(signInView)
-        NSLayoutConstraint.activate([signInView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-                                     signInView.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -120),
-                                     signInView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 16),
-                                     signInView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16)])
-        
+
+        signInView.addConstraints(left: view.leftAnchor,
+                                  right: view.rightAnchor,
+                                  centerY: view.centerYAnchor,
+                                  centerX: view.centerXAnchor,
+                                  leftConstant: 16,
+                                  rightConstant: 16,
+                                  centerYConstant: -120)
+
     }
     
     private func setupViewBindings() {
