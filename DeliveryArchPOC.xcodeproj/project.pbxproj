@@ -20,6 +20,11 @@
 		2F505449260EFE69001B0C4B /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F505448260EFE69001B0C4B /* SignInView.swift */; };
 		2F50544D260EFE79001B0C4B /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F50544C260EFE79001B0C4B /* SignInViewModel.swift */; };
 		2F505457260F0C22001B0C4B /* ModelObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F505456260F0C22001B0C4B /* ModelObservable.swift */; };
+		2F7157AE2613EF2400C4F302 /* TestControllerPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7157AD2613EF2400C4F302 /* TestControllerPresenter.swift */; };
+		2F7157B32613F07000C4F302 /* DemoViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7157B22613F07000C4F302 /* DemoViewControllerTests.swift */; };
+		2F7157B92613F0AC00C4F302 /* DemoViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7157B82613F0AC00C4F302 /* DemoViewModelMock.swift */; };
+		2F7157BD2613F16600C4F302 /* NavigatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7157BC2613F16600C4F302 /* NavigatorMock.swift */; };
+		2F7157C12613F24E00C4F302 /* ViewControllerFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7157C02613F24E00C4F302 /* ViewControllerFactoryMock.swift */; };
 		2F9388E726111603003B9DC3 /* DummySignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9388E626111603003B9DC3 /* DummySignInManager.swift */; };
 		2F9388EC26112480003B9DC3 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9388EB26112480003B9DC3 /* SuccessViewController.swift */; };
 		2F9388F82611289B003B9DC3 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 2F9388F72611289B003B9DC3 /* Quick */; };
@@ -58,6 +63,11 @@
 		2F505448260EFE69001B0C4B /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		2F50544C260EFE79001B0C4B /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		2F505456260F0C22001B0C4B /* ModelObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelObservable.swift; sourceTree = "<group>"; };
+		2F7157AD2613EF2400C4F302 /* TestControllerPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestControllerPresenter.swift; sourceTree = "<group>"; };
+		2F7157B22613F07000C4F302 /* DemoViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewControllerTests.swift; sourceTree = "<group>"; };
+		2F7157B82613F0AC00C4F302 /* DemoViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewModelMock.swift; sourceTree = "<group>"; };
+		2F7157BC2613F16600C4F302 /* NavigatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorMock.swift; sourceTree = "<group>"; };
+		2F7157C02613F24E00C4F302 /* ViewControllerFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactoryMock.swift; sourceTree = "<group>"; };
 		2F9388E626111603003B9DC3 /* DummySignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummySignInManager.swift; sourceTree = "<group>"; };
 		2F9388EB26112480003B9DC3 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		2F9389062611292E003B9DC3 /* SignInViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModelTests.swift; sourceTree = "<group>"; };
@@ -133,9 +143,10 @@
 		2F5053FF260EF299001B0C4B /* DeliveryArchPOCTests */ = {
 			isa = PBXGroup;
 			children = (
+				2F7157B12613F02100C4F302 /* Controllers */,
+				2F505402260EF299001B0C4B /* Info.plist */,
 				2F93890A26112992003B9DC3 /* Utils */,
 				2F938904261128F6003B9DC3 /* Views */,
-				2F505402260EF299001B0C4B /* Info.plist */,
 			);
 			path = DeliveryArchPOCTests;
 			sourceTree = "<group>";
@@ -193,6 +204,14 @@
 			path = SignInView;
 			sourceTree = "<group>";
 		};
+		2F7157B12613F02100C4F302 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2F7157B22613F07000C4F302 /* DemoViewControllerTests.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		2F9388EA2611246C003B9DC3 /* SuccessViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -221,6 +240,7 @@
 			isa = PBXGroup;
 			children = (
 				2F93890B26112998003B9DC3 /* Mocks */,
+				2F7157AD2613EF2400C4F302 /* TestControllerPresenter.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -230,6 +250,9 @@
 			children = (
 				2F93890C261129AA003B9DC3 /* LocalizableManagerMock.swift */,
 				2F938912261129B7003B9DC3 /* SignInManagerMock.swift */,
+				2F7157B82613F0AC00C4F302 /* DemoViewModelMock.swift */,
+				2F7157BC2613F16600C4F302 /* NavigatorMock.swift */,
+				2F7157C02613F24E00C4F302 /* ViewControllerFactoryMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -374,7 +397,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F7157AE2613EF2400C4F302 /* TestControllerPresenter.swift in Sources */,
+				2F7157B92613F0AC00C4F302 /* DemoViewModelMock.swift in Sources */,
+				2F7157B32613F07000C4F302 /* DemoViewControllerTests.swift in Sources */,
+				2F7157C12613F24E00C4F302 /* ViewControllerFactoryMock.swift in Sources */,
 				2F93890D261129AA003B9DC3 /* LocalizableManagerMock.swift in Sources */,
+				2F7157BD2613F16600C4F302 /* NavigatorMock.swift in Sources */,
 				2F9389072611292E003B9DC3 /* SignInViewModelTests.swift in Sources */,
 				2F938913261129B7003B9DC3 /* SignInManagerMock.swift in Sources */,
 			);
