@@ -26,12 +26,13 @@ class SignInViewModelTests: QuickSpec {
         }
         
         describe("input actions") {
+            // MARK: - didInit
             context("didInit") {
                 beforeEach {
                     subject.dispatchInputAction(.didInit)
                 }
                 
-                it("should setup viewstate localizable properties") {
+                it("should setup ViewState localizable properties") {
                     expect(subject.viewState.userLabelText).to(equal(testText))
                     expect(subject.viewState.passwordLabelText).to(equal(testText))
                     expect(subject.viewState.userPlaceHolderText).to(equal(testText))
@@ -46,6 +47,7 @@ class SignInViewModelTests: QuickSpec {
                 }
             }
             
+            // MARK: - didUpdateUserName
             context("didUpdateUserName") {
                 context("with valid user name") {
                     beforeEach {
@@ -53,7 +55,7 @@ class SignInViewModelTests: QuickSpec {
                             subject.dispatchInputAction(.didUpdateUserName(userName: "dummyUser"))
                         }
                         
-                        it("should set viewstate value and validate") {
+                        it("should set ViewState value and validate") {
                             expect(subject.viewState.userName.get()).to(equal("dummyUser"))
                             expect(subject.modelState.isValidUserName).to(beTrue())
                         }
@@ -66,9 +68,80 @@ class SignInViewModelTests: QuickSpec {
                             subject.dispatchInputAction(.didUpdateUserName(userName: "dummy"))
                         }
                         
-                        it("should set viewstate value and validate") {
+                        it("should set ViewState value and validate") {
                             expect(subject.viewState.userName.get()).to(equal("dummy"))
                             expect(subject.modelState.isValidUserName).to(beFalse())
+                        }
+                    }
+                }
+            }
+            
+            // MARK: - didUpdateUserPassword
+            context("didUpdateUserPassword") {
+                let validPassword = "dummypass"
+
+                context("with valid user password") {
+                    beforeEach {
+                        beforeEach {
+                            subject.dispatchInputAction(.didUpdateUserPassword(password: validPassword))
+                        }
+                        
+                        it("should set ViewState value and validate") {
+                            expect(subject.viewState.password.get()).to(equal(validPassword))
+                            expect(subject.modelState.isValidPassword).to(beTrue())
+                        }
+                    }
+                }
+                
+                context("with invalid user password") {
+                    let invalidPassword = "pass"
+                    
+                    beforeEach {
+                        beforeEach {
+                            subject.dispatchInputAction(.didUpdateUserPassword(password: invalidPassword))
+                        }
+                        
+                        it("should set ViewState value and validate") {
+                            expect(subject.viewState.password.get()).to(equal(invalidPassword))
+                            expect(subject.modelState.isValidPassword).to(beFalse())
+                        }
+                    }
+                }
+            }
+            
+            // MARK: - didTapSignIn
+            context("didTapSignIn") {
+                
+                context("with valid username and password") {
+                    beforeEach {
+                        beforeEach {
+                            subject.dispatchInputAction(.didUpdateUserName(userName: "dummyUser"))
+                            subject.dispatchInputAction(.didUpdateUserPassword(password: "dummypass"))
+                            
+                            beforeEach {
+                                subject.dispatchInputAction(.didTapSignIn)
+                                signInManagerMock.resolveSignIn(withResult: .success(false))
+                                
+                            }
+                            it("should set ViewState value and validate") {
+                                expect(subject.viewState.userName.get()).to(equal("dummyUser"))
+                                expect(subject.modelState.isValidUserName).to(beTrue())
+                                
+                                expect(subject.viewState.password.get()).to(equal("dummypass"))
+                                expect(subject.modelState.isValidPassword).to(beTrue())
+                            }
+                        }
+                    }
+                }
+                
+                context("with invalid username and password") {
+                    beforeEach {
+                        beforeEach {
+                            subject.dispatchInputAction(.didTapSignIn)
+                        }
+                        
+                        it("should set ViewState value and validate") {
+                            expect(subject.viewState.isLoading.get()).to(beNil())
                         }
                     }
                 }
