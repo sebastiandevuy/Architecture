@@ -25,6 +25,8 @@
 		2F7157B92613F0AC00C4F302 /* DemoViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7157B82613F0AC00C4F302 /* DemoViewModelMock.swift */; };
 		2F7157BD2613F16600C4F302 /* NavigatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7157BC2613F16600C4F302 /* NavigatorMock.swift */; };
 		2F7157C12613F24E00C4F302 /* ViewControllerFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7157C02613F24E00C4F302 /* ViewControllerFactoryMock.swift */; };
+		2F8A940F261BF1EF00912EDE /* SignInViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A940E261BF1EF00912EDE /* SignInViewTests.swift */; };
+		2F8A9413261BF25700912EDE /* SignInViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A9412261BF25700912EDE /* SignInViewModelMock.swift */; };
 		2F9388E726111603003B9DC3 /* DummySignInManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9388E626111603003B9DC3 /* DummySignInManager.swift */; };
 		2F9388EC26112480003B9DC3 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9388EB26112480003B9DC3 /* SuccessViewController.swift */; };
 		2F9388F82611289B003B9DC3 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 2F9388F72611289B003B9DC3 /* Quick */; };
@@ -68,6 +70,8 @@
 		2F7157B82613F0AC00C4F302 /* DemoViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewModelMock.swift; sourceTree = "<group>"; };
 		2F7157BC2613F16600C4F302 /* NavigatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigatorMock.swift; sourceTree = "<group>"; };
 		2F7157C02613F24E00C4F302 /* ViewControllerFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactoryMock.swift; sourceTree = "<group>"; };
+		2F8A940E261BF1EF00912EDE /* SignInViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewTests.swift; sourceTree = "<group>"; };
+		2F8A9412261BF25700912EDE /* SignInViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModelMock.swift; sourceTree = "<group>"; };
 		2F9388E626111603003B9DC3 /* DummySignInManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummySignInManager.swift; sourceTree = "<group>"; };
 		2F9388EB26112480003B9DC3 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		2F9389062611292E003B9DC3 /* SignInViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModelTests.swift; sourceTree = "<group>"; };
@@ -223,17 +227,18 @@
 		2F938904261128F6003B9DC3 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2F938905261128FD003B9DC3 /* SignInview */,
+				2F938905261128FD003B9DC3 /* SignInView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
 		};
-		2F938905261128FD003B9DC3 /* SignInview */ = {
+		2F938905261128FD003B9DC3 /* SignInView */ = {
 			isa = PBXGroup;
 			children = (
 				2F9389062611292E003B9DC3 /* SignInViewModelTests.swift */,
+				2F8A940E261BF1EF00912EDE /* SignInViewTests.swift */,
 			);
-			path = SignInview;
+			path = SignInView;
 			sourceTree = "<group>";
 		};
 		2F93890A26112992003B9DC3 /* Utils */ = {
@@ -253,6 +258,7 @@
 				2F7157B82613F0AC00C4F302 /* DemoViewModelMock.swift */,
 				2F7157BC2613F16600C4F302 /* NavigatorMock.swift */,
 				2F7157C02613F24E00C4F302 /* ViewControllerFactoryMock.swift */,
+				2F8A9412261BF25700912EDE /* SignInViewModelMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -398,8 +404,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F7157AE2613EF2400C4F302 /* TestControllerPresenter.swift in Sources */,
+				2F8A940F261BF1EF00912EDE /* SignInViewTests.swift in Sources */,
 				2F7157B92613F0AC00C4F302 /* DemoViewModelMock.swift in Sources */,
 				2F7157B32613F07000C4F302 /* DemoViewControllerTests.swift in Sources */,
+				2F8A9413261BF25700912EDE /* SignInViewModelMock.swift in Sources */,
 				2F7157C12613F24E00C4F302 /* ViewControllerFactoryMock.swift in Sources */,
 				2F93890D261129AA003B9DC3 /* LocalizableManagerMock.swift in Sources */,
 				2F7157BD2613F16600C4F302 /* NavigatorMock.swift in Sources */,
