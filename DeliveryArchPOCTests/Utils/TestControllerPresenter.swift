@@ -15,5 +15,6 @@ class TestControllerPresenter {
         window.makeKeyAndVisible()
         window.rootViewController = controller
         _ = controller.view
+        controller.children.forEach({ _ = $0.view })
     }
 }
