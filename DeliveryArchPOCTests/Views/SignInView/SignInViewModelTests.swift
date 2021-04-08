@@ -166,17 +166,36 @@ class SignInViewModelTests: QuickSpec {
             
             // MARK: - didEndEditingUser
             context("didEndEditingUser") {
-                
                 context("with empty username") {
                     beforeEach {
+                        subject.viewState.userName.set(newValue: "")
                         subject.dispatchInputAction(.didEndEditingUser)
                     }
-                    
                     it("should set ViewState value and validate") {
-                        expect(subject.viewState.userName.get()).to(equal(""))
-                        expect(subject.modelState.isValidUserName).to(beTrue())
+                        expect(subject.viewState.userError.get()).to(beNil())
                     }
-                    
+                }
+
+                context("with valid user name") {
+                    beforeEach {
+                        subject.viewState.userName.set(newValue: "mydummyuser")
+                        subject.modelState.isValidUserName = true
+                        subject.dispatchInputAction(.didEndEditingUser)
+                    }
+                    it("should set ViewState value and validate") {
+                        expect(subject.viewState.userError.get()).to(beNil())
+                    }
+                }
+
+                context("with invalid user name") {
+                    beforeEach {
+                        subject.viewState.userName.set(newValue: "mydummyuser")
+                        subject.modelState.isValidUserName = false
+                        subject.dispatchInputAction(.didEndEditingUser)
+                    }
+                    it("should set ViewState value and validate") {
+                        expect(subject.viewState.userError.get()).to(equal("Insuficiente cantidad de caracteres en user"))
+                    }
                 }
             }
         }
