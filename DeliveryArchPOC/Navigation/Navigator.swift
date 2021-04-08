@@ -30,7 +30,7 @@ class Navigator: NavigatorProtocol {
         switch presentationStyle {
         case .push:
             if let topNavigationController = topController as? UINavigationController {
-                topNavigationController.pushViewController(navigationWrapper, animated: true)
+                topNavigationController.pushViewController(controller, animated: true)
             } else {
                 //Fallback if there is no Navigation Controller on top
                 topController.present(navigationWrapper, animated: true)
