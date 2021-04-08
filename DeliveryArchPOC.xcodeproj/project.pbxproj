@@ -129,15 +129,15 @@
 		2F5053E8260EF297001B0C4B /* DeliveryArchPOC */ = {
 			isa = PBXGroup;
 			children = (
+				93D45E85261FC2CC002FBFDD /* Utilities */,
+				93D45E84261FC2C1002FBFDD /* Resources */,
+				93D45E80261FC1E3002FBFDD /* Core */,
+				93D45E7F261FC1CF002FBFDD /* Delivery */,
+				93D45E7E261FC1C1002FBFDD /* Infrastructure */,
 				08475ACC2612A3C500C13394 /* Extensions */,
 				2FAC53FC260F102100E2109E /* Managers */,
-				2F505446260EFE49001B0C4B /* Views */,
-				2F50543D260EF87C001B0C4B /* Navigation */,
-				2F505436260EF758001B0C4B /* ViewModels */,
-				2F505428260EF329001B0C4B /* Controllers */,
 				2F5053E9260EF297001B0C4B /* AppDelegate.swift */,
 				2F5053EB260EF297001B0C4B /* SceneDelegate.swift */,
-				2F5053F2260EF298001B0C4B /* Assets.xcassets */,
 				2F5053F4260EF298001B0C4B /* LaunchScreen.storyboard */,
 				2F5053F7260EF298001B0C4B /* Info.plist */,
 			);
@@ -153,25 +153,6 @@
 				2F938904261128F6003B9DC3 /* Views */,
 			);
 			path = DeliveryArchPOCTests;
-			sourceTree = "<group>";
-		};
-		2F505428260EF329001B0C4B /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				2F9388EA2611246C003B9DC3 /* SuccessViewController */,
-				2F505435260EF746001B0C4B /* DemoViewController */,
-				2F505431260EF514001B0C4B /* ViewControllerFactory.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		2F505435260EF746001B0C4B /* DemoViewController */ = {
-			isa = PBXGroup;
-			children = (
-				2F50542B260EF350001B0C4B /* DemoViewController.swift */,
-				2F505442260EFD04001B0C4B /* DemoViewModel.swift */,
-			);
-			path = DemoViewController;
 			sourceTree = "<group>";
 		};
 		2F505436260EF758001B0C4B /* ViewModels */ = {
@@ -191,37 +172,12 @@
 			path = Navigation;
 			sourceTree = "<group>";
 		};
-		2F505446260EFE49001B0C4B /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				2F505447260EFE57001B0C4B /* SignInView */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		2F505447260EFE57001B0C4B /* SignInView */ = {
-			isa = PBXGroup;
-			children = (
-				2F505448260EFE69001B0C4B /* SignInView.swift */,
-				2F50544C260EFE79001B0C4B /* SignInViewModel.swift */,
-			);
-			path = SignInView;
-			sourceTree = "<group>";
-		};
 		2F7157B12613F02100C4F302 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
 				2F7157B22613F07000C4F302 /* DemoViewControllerTests.swift */,
 			);
 			path = Controllers;
-			sourceTree = "<group>";
-		};
-		2F9388EA2611246C003B9DC3 /* SuccessViewController */ = {
-			isa = PBXGroup;
-			children = (
-				2F9388EB26112480003B9DC3 /* SuccessViewController.swift */,
-			);
-			path = SuccessViewController;
 			sourceTree = "<group>";
 		};
 		2F938904261128F6003B9DC3 /* Views */ = {
@@ -270,6 +226,258 @@
 				2F9388E626111603003B9DC3 /* DummySignInManager.swift */,
 			);
 			path = Managers;
+			sourceTree = "<group>";
+		};
+		93D45E7E261FC1C1002FBFDD /* Infrastructure */ = {
+			isa = PBXGroup;
+			children = (
+				93D45E96261FC3D1002FBFDD /* Repositories */,
+				93D45E95261FC3CB002FBFDD /* DTOs */,
+				93D45E94261FC3BE002FBFDD /* Services */,
+			);
+			path = Infrastructure;
+			sourceTree = "<group>";
+		};
+		93D45E7F261FC1CF002FBFDD /* Delivery */ = {
+			isa = PBXGroup;
+			children = (
+				2F50543D260EF87C001B0C4B /* Navigation */,
+				2F505436260EF758001B0C4B /* ViewModels */,
+				93D45E93261FC3A8002FBFDD /* Tracking */,
+				93D45E92261FC3A3002FBFDD /* FWF */,
+				93D45E91261FC398002FBFDD /* Deeplinks */,
+				93D45E90261FC38D002FBFDD /* Dependencies */,
+				93D45E81261FC288002FBFDD /* Flows */,
+			);
+			path = Delivery;
+			sourceTree = "<group>";
+		};
+		93D45E80261FC1E3002FBFDD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				93D45E83261FC2B4002FBFDD /* Model */,
+				93D45E82261FC2A9002FBFDD /* Actions */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		93D45E81261FC288002FBFDD /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				2F505431260EF514001B0C4B /* ViewControllerFactory.swift */,
+				93D45E87261FC307002FBFDD /* Signin */,
+				93D45E86261FC2FB002FBFDD /* Success */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		93D45E82261FC2A9002FBFDD /* Actions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Actions;
+			sourceTree = "<group>";
+		};
+		93D45E83261FC2B4002FBFDD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		93D45E84261FC2C1002FBFDD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				93D45E9D261FCAFC002FBFDD /* Localizables */,
+				93D45E9C261FCAE9002FBFDD /* Assets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		93D45E85261FC2CC002FBFDD /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		93D45E86261FC2FB002FBFDD /* Success */ = {
+			isa = PBXGroup;
+			children = (
+				93D45E8B261FC336002FBFDD /* Coordinator */,
+				93D45E8A261FC32E002FBFDD /* Builder */,
+				93D45E89261FC327002FBFDD /* ViewModel */,
+				93D45E88261FC321002FBFDD /* ViewController */,
+			);
+			path = Success;
+			sourceTree = "<group>";
+		};
+		93D45E87261FC307002FBFDD /* Signin */ = {
+			isa = PBXGroup;
+			children = (
+				93D45E9A261FCA19002FBFDD /* Views */,
+				93D45E8F261FC35A002FBFDD /* Coordinator */,
+				93D45E8E261FC353002FBFDD /* Builder */,
+				93D45E8D261FC34B002FBFDD /* ViewModel */,
+				93D45E8C261FC346002FBFDD /* ViewController */,
+			);
+			path = Signin;
+			sourceTree = "<group>";
+		};
+		93D45E88261FC321002FBFDD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2F9388EB26112480003B9DC3 /* SuccessViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		93D45E89261FC327002FBFDD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		93D45E8A261FC32E002FBFDD /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		93D45E8B261FC336002FBFDD /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		93D45E8C261FC346002FBFDD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2F50542B260EF350001B0C4B /* DemoViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		93D45E8D261FC34B002FBFDD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2F505442260EFD04001B0C4B /* DemoViewModel.swift */,
+				2F50544C260EFE79001B0C4B /* SignInViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		93D45E8E261FC353002FBFDD /* Builder */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Builder;
+			sourceTree = "<group>";
+		};
+		93D45E8F261FC35A002FBFDD /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		93D45E90261FC38D002FBFDD /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		93D45E91261FC398002FBFDD /* Deeplinks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Deeplinks;
+			sourceTree = "<group>";
+		};
+		93D45E92261FC3A3002FBFDD /* FWF */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = FWF;
+			sourceTree = "<group>";
+		};
+		93D45E93261FC3A8002FBFDD /* Tracking */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Tracking;
+			sourceTree = "<group>";
+		};
+		93D45E94261FC3BE002FBFDD /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				93D45E99261FC3EF002FBFDD /* Endpoint */,
+				93D45E98261FC3E8002FBFDD /* Parameters */,
+				93D45E97261FC3E1002FBFDD /* Network */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		93D45E95261FC3CB002FBFDD /* DTOs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DTOs;
+			sourceTree = "<group>";
+		};
+		93D45E96261FC3D1002FBFDD /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		93D45E97261FC3E1002FBFDD /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		93D45E98261FC3E8002FBFDD /* Parameters */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Parameters;
+			sourceTree = "<group>";
+		};
+		93D45E99261FC3EF002FBFDD /* Endpoint */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Endpoint;
+			sourceTree = "<group>";
+		};
+		93D45E9A261FCA19002FBFDD /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2F505448260EFE69001B0C4B /* SignInView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		93D45E9C261FCAE9002FBFDD /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				2F5053F2260EF298001B0C4B /* Assets.xcassets */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		93D45E9D261FCAFC002FBFDD /* Localizables */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Localizables;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
