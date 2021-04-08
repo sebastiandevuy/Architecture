@@ -132,6 +132,7 @@ class SignInViewModelTests: QuickSpec {
                             
                             it("should set the correct signinResult") {
                                 expect(subject.viewState.signInResult.get()).to(equal(.success))
+                                expect(subject.viewState.isLoading.get()).to(beFalse())
                             }
                         }
                         
@@ -142,6 +143,7 @@ class SignInViewModelTests: QuickSpec {
                             
                             it("should set the correct signinResult") {
                                 expect(subject.viewState.signInResult.get()).to(equal(.failed))
+                                expect(subject.viewState.isLoading.get()).to(beFalse())
                             }
                         }
                     }
@@ -169,12 +171,14 @@ class SignInViewModelTests: QuickSpec {
                 
                 context("with empty username") {
                     beforeEach {
+                        subject.viewState.userName.set(newValue: "")
                         subject.dispatchInputAction(.didEndEditingUser)
+                        subject.viewState.userError.set(newValue: "Insuficiente cantidad de caracteres en user")
                     }
                     
                     it("should set ViewState value and validate") {
-                        expect(subject.viewState.userName.get()).to(equal(""))
-                        expect(subject.modelState.isValidUserName).to(beTrue())
+                        expect(subject.modelState.isValidUserName).to(beFalse())
+                        expect(subject.viewState.userError.get()).to(equal("Insuficiente cantidad de caracteres en user"))
                     }
                     
                 }
