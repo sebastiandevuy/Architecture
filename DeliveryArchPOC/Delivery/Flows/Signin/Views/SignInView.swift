@@ -22,7 +22,7 @@ class SignInView: UIView {
     
     var userSignInResult = ViewObservable<SignInResult>(nil)
     
-    init(viewModel: SignInViewModel = SignInViewModel()) {
+    init(viewModel: SignInViewModel) {
         self.viewModel = viewModel
         super.init(frame: .zero)
         viewModel.dispatchInputAction(.didInit)

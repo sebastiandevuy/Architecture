@@ -9,15 +9,15 @@ import Foundation
 
 class SignInViewModel: ViewModelable {
     private let localizableManager: DummyLocalizableManagerProtocol
-    private let signInManager: DummySingInManagerProtocol
+    private let signInAction: SignInAction
     
     var viewState = Viewstate()
     var modelState = ModelState()
     
     init(localizableManager: DummyLocalizableManagerProtocol = DummyLocalizableManager(),
-         signInManager: DummySingInManagerProtocol = DummySignInManager()) {
+         signInAction: SignInAction) {
         self.localizableManager = localizableManager
-        self.signInManager = signInManager
+        self.signInAction = signInAction
     }
     
     func dispatchInputAction(_ action: InputAction) {
@@ -111,7 +111,7 @@ class SignInViewModel: ViewModelable {
             return
         }
         viewState.isLoading.set(newValue: true)
-        signInManager.signIn(userName: viewState.userName.get()!,
+        signInAction.execute(user: viewState.userName.get()!,
                              password: viewState.password.get()!) { [weak self] result in
             self?.viewState.isLoading.set(newValue: false)
             switch result {

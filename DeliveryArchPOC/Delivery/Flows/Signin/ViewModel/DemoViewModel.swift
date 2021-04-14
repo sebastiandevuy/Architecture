@@ -14,8 +14,8 @@ class DemoViewModel: ViewModelable {
     var viewState = Viewstate()
     var modelState = ModelState()
     
-    init(navigator: NavigatorProtocol = Navigator(),
-         controllerFactory: ViewControllerFactoryProtocol = ViewControllerFactory()) {
+    init(navigator: NavigatorProtocol,
+         controllerFactory: ViewControllerFactoryProtocol) {
         self.navigator = navigator
         self.controllerFactory = controllerFactory
     }
