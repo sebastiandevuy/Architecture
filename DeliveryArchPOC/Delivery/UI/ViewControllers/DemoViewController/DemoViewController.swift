@@ -9,10 +9,12 @@ import UIKit
 
 class DemoViewController: UIViewController {
     private let viewModel: DemoViewModel
-    private let signInView = SignInView()
+    private let signInView: SignInView
     
-    init(viewModel: DemoViewModel = DemoViewModel()) {
+    init(viewModel: DemoViewModel,
+         signInView: SignInView) {
         self.viewModel = viewModel
+        self.signInView = signInView
         super.init(nibName: nil, bundle: nil)
         setupView()
     }

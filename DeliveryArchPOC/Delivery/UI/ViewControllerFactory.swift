@@ -16,7 +16,7 @@ class ViewControllerFactory: ViewControllerFactoryProtocol {
     func create(_ controller: ViewControllerFactory.Controller) -> UIViewController {
         switch controller {
         case .demo:
-            return DemoViewController()
+            return DemoViewControllerBuilder().build()
         case .loginSuccess:
             return SuccessViewController()
         case .alert(let title, let message, let action, let handler):
