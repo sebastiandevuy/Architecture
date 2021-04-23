@@ -27,14 +27,13 @@
 		2F7157C12613F24E00C4F302 /* ViewControllerFactoryMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7157C02613F24E00C4F302 /* ViewControllerFactoryMock.swift */; };
 		2F8A940F261BF1EF00912EDE /* SignInViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A940E261BF1EF00912EDE /* SignInViewTests.swift */; };
 		2F8A9413261BF25700912EDE /* SignInViewModelMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F8A9412261BF25700912EDE /* SignInViewModelMock.swift */; };
-		2F9388EC26112480003B9DC3 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9388EB26112480003B9DC3 /* SuccessViewController.swift */; };
 		2F9388F82611289B003B9DC3 /* Quick in Frameworks */ = {isa = PBXBuildFile; productRef = 2F9388F72611289B003B9DC3 /* Quick */; };
 		2F9388FD261128C7003B9DC3 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 2F9388FC261128C7003B9DC3 /* Nimble */; };
 		2F9389072611292E003B9DC3 /* SignInViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F9389062611292E003B9DC3 /* SignInViewModelTests.swift */; };
 		2F93890D261129AA003B9DC3 /* LocalizableManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F93890C261129AA003B9DC3 /* LocalizableManagerMock.swift */; };
 		2F938913261129B7003B9DC3 /* SignInManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F938912261129B7003B9DC3 /* SignInManagerMock.swift */; };
 		2FAC53FE260F103700E2109E /* DummyLocalizableManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FAC53FD260F103700E2109E /* DummyLocalizableManager.swift */; };
-		93F6254A26264FD8003FE475 /* SignInAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6254926264FD8003FE475 /* SignInAction.swift */; };
+		939ACA172632FC3600A229C0 /* SuccessViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 939ACA162632FC3600A229C0 /* SuccessViewController.swift */; };
 		93F6254E26265066003FE475 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6254D26265066003FE475 /* User.swift */; };
 		93F6255226265183003FE475 /* SignInRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6255126265183003FE475 /* SignInRepository.swift */; };
 		93F6255A26271784003FE475 /* DemoViewControllerBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F6255926271784003FE475 /* DemoViewControllerBuilder.swift */; };
@@ -75,12 +74,11 @@
 		2F7157C02613F24E00C4F302 /* ViewControllerFactoryMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerFactoryMock.swift; sourceTree = "<group>"; };
 		2F8A940E261BF1EF00912EDE /* SignInViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewTests.swift; sourceTree = "<group>"; };
 		2F8A9412261BF25700912EDE /* SignInViewModelMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModelMock.swift; sourceTree = "<group>"; };
-		2F9388EB26112480003B9DC3 /* SuccessViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		2F9389062611292E003B9DC3 /* SignInViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModelTests.swift; sourceTree = "<group>"; };
 		2F93890C261129AA003B9DC3 /* LocalizableManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalizableManagerMock.swift; sourceTree = "<group>"; };
 		2F938912261129B7003B9DC3 /* SignInManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInManagerMock.swift; sourceTree = "<group>"; };
 		2FAC53FD260F103700E2109E /* DummyLocalizableManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyLocalizableManager.swift; sourceTree = "<group>"; };
-		93F6254926264FD8003FE475 /* SignInAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInAction.swift; sourceTree = "<group>"; };
+		939ACA162632FC3600A229C0 /* SuccessViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SuccessViewController.swift; sourceTree = "<group>"; };
 		93F6254D26265066003FE475 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		93F6255126265183003FE475 /* SignInRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRepository.swift; sourceTree = "<group>"; };
 		93F6255926271784003FE475 /* DemoViewControllerBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoViewControllerBuilder.swift; sourceTree = "<group>"; };
@@ -135,13 +133,12 @@
 		2F5053E8260EF297001B0C4B /* DeliveryArchPOC */ = {
 			isa = PBXGroup;
 			children = (
+				08475ACC2612A3C500C13394 /* Extensions */,
 				93D45E85261FC2CC002FBFDD /* Utilities */,
 				93D45E84261FC2C1002FBFDD /* Resources */,
 				93D45E80261FC1E3002FBFDD /* Core */,
 				93D45E7F261FC1CF002FBFDD /* Delivery */,
 				93D45E7E261FC1C1002FBFDD /* Infrastructure */,
-				08475ACC2612A3C500C13394 /* Extensions */,
-				2FAC53FC260F102100E2109E /* Managers */,
 				2F5053E9260EF297001B0C4B /* AppDelegate.swift */,
 				2F5053EB260EF297001B0C4B /* SceneDelegate.swift */,
 				2F5053F4260EF298001B0C4B /* LaunchScreen.storyboard */,
@@ -161,13 +158,13 @@
 			path = DeliveryArchPOCTests;
 			sourceTree = "<group>";
 		};
-		2F505436260EF758001B0C4B /* ViewModels */ = {
+		2F505436260EF758001B0C4B /* ViewModellable */ = {
 			isa = PBXGroup;
 			children = (
 				2F505439260EF7C3001B0C4B /* ViewModellable.swift */,
 				2F505456260F0C22001B0C4B /* ModelObservable.swift */,
 			);
-			path = ViewModels;
+			path = ViewModellable;
 			sourceTree = "<group>";
 		};
 		2F50543D260EF87C001B0C4B /* Navigation */ = {
@@ -225,12 +222,29 @@
 			path = Mocks;
 			sourceTree = "<group>";
 		};
-		2FAC53FC260F102100E2109E /* Managers */ = {
+		939ACA0D2632FBB400A229C0 /* SuccessViewController */ = {
 			isa = PBXGroup;
 			children = (
-				2FAC53FD260F103700E2109E /* DummyLocalizableManager.swift */,
+				939ACA162632FC3600A229C0 /* SuccessViewController.swift */,
 			);
-			path = Managers;
+			path = SuccessViewController;
+			sourceTree = "<group>";
+		};
+		939ACA0E2632FBCE00A229C0 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				939ACA0D2632FBB400A229C0 /* SuccessViewController */,
+				93D45E8C261FC346002FBFDD /* DemoViewController */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		939ACA0F2632FBD600A229C0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				93D45E9A261FCA19002FBFDD /* SignInView */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		93D45E7E261FC1C1002FBFDD /* Infrastructure */ = {
@@ -246,13 +260,9 @@
 		93D45E7F261FC1CF002FBFDD /* Delivery */ = {
 			isa = PBXGroup;
 			children = (
-				2F50543D260EF87C001B0C4B /* Navigation */,
-				2F505436260EF758001B0C4B /* ViewModels */,
-				93D45E93261FC3A8002FBFDD /* Tracking */,
-				93D45E92261FC3A3002FBFDD /* FWF */,
 				93D45E91261FC398002FBFDD /* Deeplinks */,
 				93D45E90261FC38D002FBFDD /* Dependencies */,
-				93D45E81261FC288002FBFDD /* Flows */,
+				93D45E81261FC288002FBFDD /* UI */,
 			);
 			path = Delivery;
 			sourceTree = "<group>";
@@ -261,27 +271,24 @@
 			isa = PBXGroup;
 			children = (
 				93D45E83261FC2B4002FBFDD /* Model */,
-				93D45E82261FC2A9002FBFDD /* Actions */,
+				93D45E93261FC3A8002FBFDD /* Tracking */,
+				93D45E92261FC3A3002FBFDD /* FWF */,
+				2F50543D260EF87C001B0C4B /* Navigation */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		93D45E81261FC288002FBFDD /* Flows */ = {
+		93D45E81261FC288002FBFDD /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2F505436260EF758001B0C4B /* ViewModellable */,
+				93D45E8F261FC35A002FBFDD /* Coordinator */,
+				93D45E8E261FC353002FBFDD /* Builder */,
+				939ACA0F2632FBD600A229C0 /* Views */,
+				939ACA0E2632FBCE00A229C0 /* ViewControllers */,
 				2F505431260EF514001B0C4B /* ViewControllerFactory.swift */,
-				93D45E87261FC307002FBFDD /* Signin */,
-				93D45E86261FC2FB002FBFDD /* Success */,
 			);
-			path = Flows;
-			sourceTree = "<group>";
-		};
-		93D45E82261FC2A9002FBFDD /* Actions */ = {
-			isa = PBXGroup;
-			children = (
-				93F6254926264FD8003FE475 /* SignInAction.swift */,
-			);
-			path = Actions;
+			path = UI;
 			sourceTree = "<group>";
 		};
 		93D45E83261FC2B4002FBFDD /* Model */ = {
@@ -308,73 +315,13 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		93D45E86261FC2FB002FBFDD /* Success */ = {
-			isa = PBXGroup;
-			children = (
-				93D45E8B261FC336002FBFDD /* Coordinator */,
-				93D45E8A261FC32E002FBFDD /* Builder */,
-				93D45E89261FC327002FBFDD /* ViewModel */,
-				93D45E88261FC321002FBFDD /* ViewController */,
-			);
-			path = Success;
-			sourceTree = "<group>";
-		};
-		93D45E87261FC307002FBFDD /* Signin */ = {
-			isa = PBXGroup;
-			children = (
-				93D45E9A261FCA19002FBFDD /* Views */,
-				93D45E8F261FC35A002FBFDD /* Coordinator */,
-				93D45E8E261FC353002FBFDD /* Builder */,
-				93D45E8D261FC34B002FBFDD /* ViewModel */,
-				93D45E8C261FC346002FBFDD /* ViewController */,
-			);
-			path = Signin;
-			sourceTree = "<group>";
-		};
-		93D45E88261FC321002FBFDD /* ViewController */ = {
-			isa = PBXGroup;
-			children = (
-				2F9388EB26112480003B9DC3 /* SuccessViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		93D45E89261FC327002FBFDD /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		93D45E8A261FC32E002FBFDD /* Builder */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Builder;
-			sourceTree = "<group>";
-		};
-		93D45E8B261FC336002FBFDD /* Coordinator */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Coordinator;
-			sourceTree = "<group>";
-		};
-		93D45E8C261FC346002FBFDD /* ViewController */ = {
+		93D45E8C261FC346002FBFDD /* DemoViewController */ = {
 			isa = PBXGroup;
 			children = (
 				2F50542B260EF350001B0C4B /* DemoViewController.swift */,
-			);
-			path = ViewController;
-			sourceTree = "<group>";
-		};
-		93D45E8D261FC34B002FBFDD /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
 				2F505442260EFD04001B0C4B /* DemoViewModel.swift */,
-				2F50544C260EFE79001B0C4B /* SignInViewModel.swift */,
 			);
-			path = ViewModel;
+			path = DemoViewController;
 			sourceTree = "<group>";
 		};
 		93D45E8E261FC353002FBFDD /* Builder */ = {
@@ -466,12 +413,13 @@
 			path = Endpoint;
 			sourceTree = "<group>";
 		};
-		93D45E9A261FCA19002FBFDD /* Views */ = {
+		93D45E9A261FCA19002FBFDD /* SignInView */ = {
 			isa = PBXGroup;
 			children = (
 				2F505448260EFE69001B0C4B /* SignInView.swift */,
+				2F50544C260EFE79001B0C4B /* SignInViewModel.swift */,
 			);
-			path = Views;
+			path = SignInView;
 			sourceTree = "<group>";
 		};
 		93D45E9C261FCAE9002FBFDD /* Assets */ = {
@@ -485,6 +433,7 @@
 		93D45E9D261FCAFC002FBFDD /* Localizables */ = {
 			isa = PBXGroup;
 			children = (
+				2FAC53FD260F103700E2109E /* DummyLocalizableManager.swift */,
 			);
 			path = Localizables;
 			sourceTree = "<group>";
@@ -606,8 +555,8 @@
 				2F505432260EF514001B0C4B /* ViewControllerFactory.swift in Sources */,
 				2FAC53FE260F103700E2109E /* DummyLocalizableManager.swift in Sources */,
 				93F6254E26265066003FE475 /* User.swift in Sources */,
-				93F6254A26264FD8003FE475 /* SignInAction.swift in Sources */,
 				2F50543A260EF7C3001B0C4B /* ViewModellable.swift in Sources */,
+				939ACA172632FC3600A229C0 /* SuccessViewController.swift in Sources */,
 				2F5053EA260EF297001B0C4B /* AppDelegate.swift in Sources */,
 				2F5053EC260EF297001B0C4B /* SceneDelegate.swift in Sources */,
 				2F50544D260EFE79001B0C4B /* SignInViewModel.swift in Sources */,
@@ -615,7 +564,6 @@
 				2F50543F260EF891001B0C4B /* Navigator.swift in Sources */,
 				2F505449260EFE69001B0C4B /* SignInView.swift in Sources */,
 				2F505443260EFD04001B0C4B /* DemoViewModel.swift in Sources */,
-				2F9388EC26112480003B9DC3 /* SuccessViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
